@@ -89,5 +89,5 @@ console.log(missingInfo);
  *
  * variable {password} shouldn't be defined at all
  */
-let password;
-console.log(password);
+// let password;
+// console.log(password);
