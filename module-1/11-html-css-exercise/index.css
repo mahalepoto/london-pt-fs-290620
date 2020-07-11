@@ -1,10 +1,47 @@
-h1, h3 {
-    text-align: center;
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  margin-bottom: auto;
 }
+
+h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serifs;
+  text-align: center;
+  font-weight: lighter;
+  top: 100px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 img {
-    max-width: 100%;
-    height: auto; 
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
 }
 p {
-    align-content: center;
+  position: absolute;
+  /* height: 78px;
+    width: 919px;
+    font-size: 20px;
+    line-height: 50px;  */
+  left: 150px;
+  right: 150px;
+  top: 750px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.precede p:nth-child(2) {
+  position: absolute;
+  top: 820px;
+}
+.precede p:nth-child(3) {
+  position: absolute;
+  top: 910px;
+}
+.image p {
+  text-align: center;
+  top: 660px;
+  color: #b0665d;
+  font-size: 14px;
 }
