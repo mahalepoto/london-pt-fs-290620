@@ -1,3 +1,25 @@
-img {
-    background-color: black;
+.container {
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* justify-content: flex-end;     */
+}
+
+.main-pic { 
+    width: 1600px;
+    height: 770px;
+    background-color: black;    
+}
+
+/* h5, h3 {
+    position: absolute;
+    top: 200px;
+    padding: 50px;
+    color: blanchedalmond;
+} */
+
+.main-headline {
+    /* margin-left: auto; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
 }
