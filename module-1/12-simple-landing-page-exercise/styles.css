@@ -1,25 +1,74 @@
 .container {
-    display: flex;
-    /* justify-content: space-evenly; */
-    /* justify-content: flex-end;     */
+  display: flex;
+  position: relative;
+  flex-direction: column;
 }
 
-.main-pic { 
-    width: 1600px;
-    height: 770px;
-    background-color: black;    
+.main {
+  background-color: black;
+  min-height: 61vh;
+  
 }
 
-/* h5, h3 {
-    position: absolute;
-    top: 200px;
-    padding: 50px;
-    color: blanchedalmond;
-} */
+.main-pic {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  right: -50px;
+}
+
+.main-tabs {
+  display: flex;
+  margin-left: auto;
+  color: white;
+  z-index: 10;
+}
+.main-tabs > p {
+  padding: 10px;
+  font-size: small;
+}
 
 .main-headline {
-    /* margin-left: auto; */
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+  justify-content: center;
+  color: #fff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
 }
+
+.second-section {
+    display: flex;
+    padding-top: 400px ;
+} 
+
+.html5 {
+    display: flex;
+}
+
+.img{
+    position: absolute
+    width: 584px;
+    height: 630px;
+    padding-left: 199px;
+    /* padding-right: 136px; */
+}
+
+.h1-html5 {
+    display: flex;
+    justify-content: center;
+    color:  red;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 100px;
+    z-index: 10;
+}
+/* 
+.html5 > h1 {
+    color: red;
+    padding-left: 420px;
+    padding-bottom: 300px;
+    z-index: 5;
+} */
