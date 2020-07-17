@@ -4,7 +4,7 @@
  * Create a variable "wildAnimals" and and 'tiger', 'rabbit',
  * 'panda' and 'giraffe' into it as strings
  */
-
+const wildAnimals = ['tiger', 'rabbit', 'panda', 'giraffe' ];
 
 /**
  * Exercise 2
@@ -12,6 +12,7 @@
  * Create a variable "pets" and and 'cat', 'dog' and 'hamster'
  * into it as strings(must contains dog)
  */
+const pets = ['cat', 'dog', 'hamster'];
 
 
 /**
@@ -20,6 +21,7 @@
  * Create a variable "animals". It should include all wildAnimals
  * and all pets. Find the way to concatenate your arrays with JS
  */
+const animals = ['tiger', 'rabbit', 'panda', 'giraffe', 'cat', 'dog', 'hamster'];
 
 
 /**
@@ -28,7 +30,12 @@
  * create a dogIndex variable and by using "findIndex" JS method
  * find dog index in "animals" array
  */
+let dogIndex = animals.findIndex(indexFinder);
 
+function indexFinder(index){
+    return index === 'dog';
+}
+console.log(dogIndex);
 
 /**
  * Exercise 5
