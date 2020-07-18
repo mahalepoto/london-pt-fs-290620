@@ -35,7 +35,7 @@ let dogIndex = animals.findIndex(indexFinder);
 function indexFinder(index){
     return index === 'dog';
 }
-console.log(dogIndex);
+// console.log(dogIndex);
 
 /**
  * Exercise 5
@@ -43,14 +43,15 @@ console.log(dogIndex);
  * create a pandaIndex variable and by using "indexOf" JS method
  * find dog index in "animals" array
  */
-
+let pandaIndex = animals.indexOf('panda');
+// console.log(pandaIndex);
 
 /**
  * create a variable with name "numbers"  which will be an array
  * and contain numbers from 1 to 9(ascending) and from 9 to 1(descending)
  * (each number should be twice in this array).
  */
-
+let numbers = [1,2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2,1];
 
 /**
  * Exercise 6
@@ -58,7 +59,8 @@ console.log(dogIndex);
  * Create variable "first4DigitIndex" and from "numbers"
  * find index of first instance of digit 4
  */
-
+let first4DigitIndex = numbers.indexOf(4);
+// console.log(first4DigitIndex);
 
 /**
  * Exercise 7
@@ -66,7 +68,8 @@ console.log(dogIndex);
  * Create variable "last4DigitIndex" and from "numbers"
  * find index of last instance of digit 4
  */
-
+let last4DigitIndex = numbers.indexOf(4, 4);
+// console.log(last4DigitIndex);
 
 /**
  * Exercise 8
@@ -74,7 +77,14 @@ console.log(dogIndex);
  * Create variable "hasSeven" check does "numbers"
  * contains 7
  */
-
+let hasSeven;
+for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] === 7) {
+        hasSeven = true;
+        // return hasSeven;
+    } 
+} //return false; 
+// console.log(hasSeven);
 
 /**
  * Exercise 9
@@ -82,7 +92,13 @@ console.log(dogIndex);
  * Create variable "hasTwenty" check does "numbers"
  * contains 20
  */
-
+let hasTwenty;
+for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] === 20) {
+        hasTwenty = true;
+    }
+} hasTwenty = false;
+// console.log(hasTwenty);
 
 /**
  * Exercise 10
@@ -90,7 +106,16 @@ console.log(dogIndex);
  * Create variable "moreThanFour" returns first number
  * "numbers" that are more than 4
  */
-
+let moreThanFour;
+function biggerThanFour() {
+    for (i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 4 && numbers[i] < 6) {
+            moreThanFour = numbers[i]
+            return moreThanFour;
+        }
+    }   
+} 
+console.log(moreThanFour = biggerThanFour());
 
 /**
  * Exercise 11
@@ -98,4 +123,12 @@ console.log(dogIndex);
  * Create variable "moreThanSevenIndex" returns first number
  * "numbers" that are more than 7
  */
-
+let moreThanSevenIndex;
+function equalToSeven() {
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === 7) {
+            return numbers[i];
+        }
+    }
+}        
+console.log(moreThanSevenIndex = equalToSeven());
