@@ -49,10 +49,11 @@ console.log(allTypes);
  */
 function createMovieObject(name, rating, ticketPrice) { 
     let myFavoriteMovie = {
-        name: 'Home Alone',
-        rating: 8.5,
-        ticketPrice: 20
+        name: name,
+        rating: rating,
+        ticketPrice: ticketPrice
     }    
     return myFavoriteMovie;
 }
-console.log(createMovieObject());
+console.log(createMovieObject('top gun', 9.5, 25));
+console.log(createMovieObject('Harry Potter', 9, 20));
