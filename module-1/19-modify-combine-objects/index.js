@@ -3,6 +3,10 @@
  *
  * Create an object {user} and add properties "firstName" and "lastName".
  */
+let user = {
+    firstName: 'Jasey',
+    lastName: 'Ahmed'
+}
 
 /**
  * Exercise 2
@@ -10,6 +14,10 @@
  * Create an object {userRead} and add properties "books" and "newspapers".
  * Both should be arrays with strings.
  */
+let userRead = {
+    books: [],
+    newspapers: []
+}
 
 /**
  * Exercise 3
@@ -25,7 +33,30 @@
  *   books: [],
  *   newspapers: []
  * }
+ *
  */
+
+// function to combine to objects together.
+// function copyObjects(obj1, obj2) {
+
+//     return  {
+//       ...obj1, 
+//       ...obj2
+//     }
+//   }
+  // copyObjects(user, userRead);
+
+
+
+let userReadCopy = userRead;
+console.log(userReadCopy);
+user = {
+    ...user,
+    ...userReadCopy
+} 
+// test- modifying userRead object
+userRead.books[0] = 'book1'; 
+// console.log(user);
 
 /**
  * Exercise 4
@@ -33,6 +64,10 @@
  * Create an object {userWatch} and add properties "tvShows" and "movies".
  * Both should be arrays with strings.
  */
+let userWatch ={
+    tvShows: ['show1', 'show2'],
+    movies: ['movie1', 'movie2']
+}
 
 /**
  * Exercise 5
@@ -54,3 +89,8 @@
  *   }
  * }
  */
+user = {
+    ...user,
+    userWatch
+}
+// console.log(user);
