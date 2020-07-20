@@ -4,9 +4,9 @@
  * Create an object {user} and add properties "firstName" and "lastName".
  */
 let user = {
-    firstName: 'Jasey',
-    lastName: 'Ahmed'
-}
+  firstName: "Jasey",
+  lastName: "Ahmed",
+};
 
 /**
  * Exercise 2
@@ -15,9 +15,9 @@ let user = {
  * Both should be arrays with strings.
  */
 let userRead = {
-    books: [],
-    newspapers: []
-}
+  books: [],
+  newspapers: [],
+};
 
 /**
  * Exercise 3
@@ -40,22 +40,21 @@ let userRead = {
 // function copyObjects(obj1, obj2) {
 
 //     return  {
-//       ...obj1, 
+//       ...obj1,
 //       ...obj2
 //     }
 //   }
-  // copyObjects(user, userRead);
-
-
+// copyObjects(user, userRead);
 
 let userReadCopy = userRead;
-console.log(userReadCopy);
+// console.log(userReadCopy);
+
 user = {
-    ...user,
-    ...userReadCopy
-} 
+  ...user,
+  ...userReadCopy,
+};
 // test- modifying userRead object
-userRead.books[0] = 'book1'; 
+userRead.books[0] = "book1";
 // console.log(user);
 
 /**
@@ -64,10 +63,10 @@ userRead.books[0] = 'book1';
  * Create an object {userWatch} and add properties "tvShows" and "movies".
  * Both should be arrays with strings.
  */
-let userWatch ={
-    tvShows: ['show1', 'show2'],
-    movies: ['movie1', 'movie2']
-}
+let userWatch = {
+  tvShows: ["show1", "show2"],
+  movies: ["movie1", "movie2"],
+};
 
 /**
  * Exercise 5
@@ -90,7 +89,7 @@ let userWatch ={
  * }
  */
 user = {
-    ...user,
-    userWatch
-}
+  ...user,
+  userWatch,
+};
 // console.log(user);
