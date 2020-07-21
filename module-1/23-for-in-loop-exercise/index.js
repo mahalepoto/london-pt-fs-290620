@@ -38,18 +38,24 @@ function getAllValuesAsString(object) {
  * and log property and values as string in a next format:
  * 'PROPERTY: VALUE'
  */
-// const obj = {
-//     firstName: "Alex",
-//     lastName: "Smith",
-//     age: 25
-// };
-
-function propertyValueString(object) {
+const obj = {
+    firstName: "Alex",
+    lastName: "Smith",
+    age: 25
+};
+//A very good example how to use JASON.stringify()
+// function propertyValueString(object) {
     
+//     for (let key in object) {
+//         let stringfying = key + ':' + ' '+ object[key];
+//         console.log(JSON.stringify(stringfying));
+//     }
+// }
+function propertyValueString(object) {
     for (let key in object) {
-        let stringfying = key + ':' + ' '+ object[key];
-        console.log(JSON.stringify(stringfying));
+        console.log(`${key}: ${object[key]}`);
     }
+    
 }
 
-// propertyValueString(obj);
+propertyValueString(obj);
