@@ -37,6 +37,12 @@ const dataTypes = [
  *  floats: [3.12]
  * }
  */
+// function sortedData(data) {
+//   let result = data.sort();
+//   return result;
+// }
+// sortedData(dataTypes);
+
 
 const sortedData = (data) => {
   let result = {

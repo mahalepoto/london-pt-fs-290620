@@ -6,6 +6,21 @@
  * param it should use default value for name which 
  * should be 'incognito'
  */
+// with ES5
+// function sayHi(name = 'incognito') {
+//     return `Hi, ${name}`;
+// }
+// console.log(sayHi());
+
+// using ES6 arrow function, option 1
+// const sayHi = (name = 'incognito') => {
+//     return `Hi, ${name}`;
+// }
+// console.log(sayHi());
+
+// using ES6 arrow function, option 2
+const sayHi = (name = 'incognito') => `Hi, ${name}!`;
+console.log(sayHi('Ahmed'));
 
 /**
  * Exercise 2
@@ -16,6 +31,9 @@
  * It you don't pass 1 or both params it should use 1 as 
  * a default value/values
  */
+const multiply = (num1 = 1, num2 = 1) => num1 * num2;
+console.log(multiply());
+
 
 /**
  * Exercise 3
@@ -24,6 +42,12 @@
  * pass any array, default value of your param should be 
  * array that contains only one element - string with value "Nothing to log"
  */
+const logElements = (array = ['Nothing to log']) => {
+    for (let element of array) {
+        console.log(element);
+    }
+}
+console.log(logElements())
 
 /**
  * Exercise 4
@@ -32,3 +56,7 @@
  * Default value of the param should be object with property name,
  * and value "John Smith"
  */
+
+const getUserName = (userName = {name: 'John Smith'}) => userName.name;
+
+console.log(getUserName( {name: 'Alex Fellow'}));
