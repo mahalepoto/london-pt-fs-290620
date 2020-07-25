@@ -105,7 +105,9 @@ let objectsOnly = mixArray => {
 
 let truthyOnly = mixArray => {
    return  mixArray.filter(el => {
-        return el;
+       if (el) {
+         return el;
+       } return el === 0; 
     })
 }
 // console.log(truthyOnly(test));
