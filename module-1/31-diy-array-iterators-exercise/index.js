@@ -7,7 +7,17 @@
  * element in the array and is
  * passed each element and the index.
  *
- */
+ */ 
+let test1 = ["London", "Manchester", "Chicago", "Detroit", "Mumbai", 'Karachi'];
+
+let forEach = (array, callback) => {
+    for(i = 0; i < array.length; i++) {
+        callback(array[i], i, array );
+    }
+}
+
+// const myCallback = (el, i) => console.log(el, i) 
+// forEach(test1, (el, i, arr) => console.log(el, i)); calling/invoking a callback function
 
 /**
  * Exercise #2
@@ -22,6 +32,17 @@
  * time the callback was invoked.
  *
  */
+let map = (array, callback) => {
+    let newArray = [];
+    for (i = 0; i < array.length; i++) {
+        let newElementsAndIndex =  callback(array[i], i);
+        newArray.push(newElementsAndIndex);
+    }
+    return newArray;
+}
+// map(test1, (el, i) => {
+//     console.log(el, i);
+// }) invoking call back on function of map
 
 /**
  * Exercise #3
@@ -36,6 +57,30 @@
  * callback returned a truthy value.
  *
  */
+let test2 = [
+        "kitten",
+        {},
+        0,
+        { name: "Alex" },
+        undefined,
+        NaN,
+        ["pet"],
+        "",
+        26,
+        false
+    ]; //testing 
+
+let filter = (array, callback) => {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (callback (array[i], i)) {
+            newArray.push (array[i]);
+        }
+    }
+    return newArray;
+}
+filter(test2, (el, i) => console.log(el, i)); //invoking callback
+
 
 /**
  * Exercise #4
@@ -50,6 +95,15 @@
  * truthy value.
  *
  */
+let find = (arr, callback) => {
+    
+    for (i = 0; i < arr.length; i++) {
+        if (callback(arr[i], i)) {
+            return arr[i];
+        }
+    }
+}
+find(test1, (el, i) => console.log(el));
 
 /**
  * Exercise #5
