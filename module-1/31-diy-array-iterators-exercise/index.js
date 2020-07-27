@@ -8,11 +8,11 @@
  * passed each element and the index.
  *
  */ 
-let test1 = ["London", "Manchester", "Chicago", "Detroit", "Mumbai", 'Karachi'];
+// let test1 = ["London", "Manchester", "Chicago", "Detroit", "Mumbai", 'Karachi'];  testing
 
 let forEach = (array, callback) => {
     for(i = 0; i < array.length; i++) {
-        callback(array[i], i, array );
+        callback(array[i], i);
     }
 }
 
@@ -79,7 +79,7 @@ let filter = (array, callback) => {
     }
     return newArray;
 }
-filter(test2, (el, i) => console.log(el, i)); //invoking callback
+// filter(test2, (el, i) => console.log(el, i)); invoking callback
 
 
 /**
@@ -103,7 +103,7 @@ let find = (arr, callback) => {
         }
     }
 }
-find(test1, (el, i) => console.log(el));
+// find(test1, (el, i) => console.log(el)); testing
 
 /**
  * Exercise #5
@@ -118,6 +118,13 @@ find(test1, (el, i) => console.log(el));
  * callback returns a truthy value.
  *
  */
+let findIndex = (array, callback) => {
+    for (let i = 0; i < array.length; i++) {
+        if (callback(array[i], i)) {
+            return i;
+        }
+    } 
+}
 
 /**
  * Exercise #6
@@ -133,6 +140,38 @@ find(test1, (el, i) => console.log(el));
  * a truthy value.
  *
  */
+let every = (array, callback) => {
+    for (i = 0; i < array.length; i++) {
+       if (!callback(array[i], i)) {
+            return false;
+       } 
+    } return true;
+}
+
+// every(test1, (element, index) => console.log(element));
+
+// version one
+// let every = (array, callback) => {
+//     let counter = 0;
+//     for (i = 0; i < array.length; i++) {
+//        if (callback(array[i], i)) {
+//           counter += 1;
+//        } 
+//     } 
+
+//     return counter === array.length;
+// }
+
+// version two
+// let every = (array, callback) => {
+//     for (i = 0; i < array.length; i++) {
+//        if (!callback(array[i], i)) {
+//           return false;
+//        } 
+//     } 
+
+//     return true;
+//}
 
 /**
  * Exercise #7
@@ -148,6 +187,13 @@ find(test1, (el, i) => console.log(el));
  * a truthy value.
  *
  */
+let some = (arr, callback) => {
+    for (i = 0; i < arr.length; i++) {
+        if (callback(arr[i], i)) {
+            return true;
+        }
+    } return false;
+}
 
 /**
  * Exercise #8
@@ -170,3 +216,14 @@ find(test1, (el, i) => console.log(el));
  * value.
  *
  */
+// let testArr = [2, 3, 4, 5]; testing
+
+let reduce = (array, callback, initialValue) => {
+    let accum = initialValue === undefined ? 0 : initialValue;
+    for (i = 0; i < array.length; i++) {
+        accum = callback(accum, array[i], i, array)
+        
+    } return accum;
+}
+// let result = reduce(testArr, (accumulator, currentValue) => accumulator + currentValue);
+// console.log(result); testing
