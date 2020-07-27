@@ -1,7 +1,7 @@
 {
   "name": "test-exercise",
   "version": "1.0.0",
-  "description": "",
+  "description": "If you had to write _all_ the code to make an app run on a computer, you'd need to write machine code, compilers, interpreters before you even get close to seeing \"Hello, world!\".",
   "main": "index.js",
   "scripts": {
     "concat": "concat -o ./tests/index.test.js ./index.js ./tests/tests.js ",
@@ -20,5 +20,11 @@
     "concat": "^1.0.3",
     "husky": "^4.2.3",
     "jest": "^25.1.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0"
   }
 }

@@ -19,6 +19,12 @@
  * Call this function and run "node index.js" in a terminal
  * to see the result
  */
+const chalk = require('chalk');
+
+let renderBlueText = () => {
+    console.log(chalk.blue('Hello there'));
+}
+renderBlueText();
 
 /**
  * Exercise 3
@@ -28,6 +34,10 @@
  * Call this function and run "node index.js" in a terminal
  * to see the result
  */
+let inversedColourText = (text) => {
+    console.log(chalk.inverse(text));
+}
+inversedColourText('Musshtaq Ahmed Halepoto');
 
 /**
  * Exercise 4
@@ -36,3 +46,6 @@
  * and style each by adding red background colour and setting
  * font colour to white.
  */
+let styledText = (text) => console.log(chalk.bgRed.white(text));
+
+styledText('Made in England');
