@@ -1,18 +1,24 @@
 {
   "name": "test-exercise",
   "version": "1.0.0",
-  "description": "",
+  "description": "Run the tests, the requirements are described in `index.js`.",
   "main": "index.js",
   "scripts": {
     "concat": "concat -o ./tests/index.test.js ./index.js ./tests/tests.js ",
     "test": "npm run concat && jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mushtaq",
   "license": "ISC",
   "devDependencies": {
     "concat": "^1.0.3",
     "husky": "^4.2.3",
     "jest": "^25.1.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
