@@ -6,8 +6,8 @@
  * ask user for a name and assign a response to variable {name}
  */
 const readLineSync = require('readline-sync');
-let userName = readLineSync.question('Enter your name');
-console.log(`Hi, ${userName}!`);
+let name = readLineSync.question('Enter your name');
+// console.log(`Hi, ${userName}!`); testing
 
 
 
@@ -29,6 +29,58 @@ console.log("=====================");
  * you get correct symbol
  */
 
+
+let doMaths = ['+', '-', '*', '/']   
+    for (i = 0; i < doMaths.length; i++) {
+        console.log((i+1) + ': ' + doMaths[i]);
+    }
+
+
+let letsDoMath = readLineSync.question('Choose a Math operation? ');
+let selectedSymbol = 0;
+for (i = 0; i < 100; i++) {
+    if (typeof letsDoMath !== 'number' && letsDoMath > 4) {
+        letsDoMath = readLineSync.question('Choose a Math operation? ');
+    } else if (typeof letsDoMath === 'number' && letsDoMath < 4) {
+            selectedSymbol = readLineSync.question('Choose a Math operation? ');
+    }
+}
+let operation = selectedSymbol +1;
+// console.log(operation); testing only
+
+
+// taking input from user and doing maths accordingly
+
+// math functions
+let addition = (num1, num2) => num1 + num2;
+let subtraction = (num1, num2) => num1 - num2;
+let multiplication = (num1, num2) => num1 * num2;
+let division = (num1, num2) => num1 / num2;
+
+let number1 = parseInt(readLineSync.question('Pick a number for maths operation'));
+let number2 = parseInt(readLineSync.question('Pick 2nd number for maths operation'));
+// console.log(number1, number2); for testing only
+
+// Calculation
+let calculate = (num1, num2, operation) => {
+    if (operation === 1) {
+        return addition(num1, num2);
+    } else if (operation === 2) {
+        return subtraction(num1, num2);
+    } else if (operation === 3) {
+        return multiplication(num1, num2);
+    } else {
+        return division(num1, num2);
+    }
+}
+let calculation = calculate(number1, number2, operation);
+console.log('Result: ' + calculation);
+console.log('number 1 is ' + number1);
+console.log('number 2 is ' + number2);
+console.log('operation is ' + operation);
+
+
+    
 /**
  * Exercise 3
  *
@@ -56,5 +108,5 @@ console.log("=====================");
  * show the result to the user
  */
 
-console.log("=====================");
-console.log(`Here you go, the result is ${result}`);
+// console.log("=====================");
+// console.log(`Here you go, the result is ${result}`);
