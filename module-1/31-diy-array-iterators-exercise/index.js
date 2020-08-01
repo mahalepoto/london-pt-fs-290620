@@ -216,14 +216,15 @@ let some = (arr, callback) => {
  * value.
  *
  */
-// let testArr = [2, 3, 4, 5]; testing
+let testArr = [2, 3, 4, 5]; //testing
 
 let reduce = (array, callback, initialValue) => {
     let accum = initialValue === undefined ? 0 : initialValue;
     for (i = 0; i < array.length; i++) {
         accum = callback(accum, array[i], i, array)
         
-    } return accum;
+    } 
+    return accum;
 }
-// let result = reduce(testArr, (accumulator, currentValue) => accumulator + currentValue);
-// console.log(result); testing
+let result = reduce(testArr, (accumulator, currentValue) => accumulator + currentValue);
+console.log(result); //testing

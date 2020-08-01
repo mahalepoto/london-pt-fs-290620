@@ -5,12 +5,14 @@
  * to variable {paragraphs}
  */
 
+let paragraphs = document.getElementsByTagName("p");
+console.log(paragraphs);
 /**
  * Exercise 2
  * select the first p tag with getElementsByTagName and assign it
  * to variable {firstParagraph}
  */
-
+let firstParagraph = document.getElementsByTagNameNS
 /**
  * Exercise 3
  *
