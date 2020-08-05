@@ -96,8 +96,8 @@ console.log(listLinks);
  * select elements where the "data-community-name" attribute
  * is "codersinhoods" and assign it {communityElements}
  */
-// last of its test failing
-let communityElements = document.querySelectorAll("dataset-community-name");
+// its last test failing
+let communityElements = document.querySelectorAll("[data-community-name=codersinhoods]");
 console.log(communityElements);
 
 /**
