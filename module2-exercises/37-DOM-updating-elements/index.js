@@ -8,18 +8,37 @@
  * create a function {setTitle} which takes a string as an argument
  * and displays it in the h1
  */
+let h1 = document.querySelector("h1");
+console.log(h1);
+let setTitle = (title) => {
+    let h1 = document.querySelector("h1");
+    h1.innerText = title;
+    console.log(title);
+}
+// setTitle("Ahmed");
 
 /**
  * Exercise 2
  * create a function {appendToTitle} which takes a string as an argument
  * and appends it to existing h1 text
  */
+let appendToTitle = (title) => {
+    let h1Text = document.createTextNode(title);
+
+    h1.append(title);
+}
+// appendToTitle(" Sindhi");
 
 /**
  * Exercise 3
  * create a function {prependToTitle} which takes a string as an argument
  * and prepends it to existing h1 element text
  */
+let prependToTitle = (text) => {
+    let prependText = document.createTextNode(text);
+    h1.prepend(text)
+}
+// prependToTitle('Mushtaq ');
 
 /**
  * Exercise 4
@@ -28,6 +47,15 @@
  * text is displayed inside that element. The element should the tag name
  * passed into the function
  */
+let setInnerHTMLForDiv = (tagName, text) => {
+    let grabDiv = document.querySelector("div");
+    let tag = document.createElement(tagName);
+    grabDiv.append(tag);
+    let textOfTag = document.createTextNode(text);
+    tag.append(textOfTag);
+}
+setInnerHTMLForDiv("span", "Hello");
+
 
 /**
  * Exercise 5
