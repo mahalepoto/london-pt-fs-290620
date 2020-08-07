@@ -44,25 +44,34 @@ let prependToTitle = (text) => {
  * Exercise 4
  * create a function {setInnerHTMLForDiv} which takes a tag name and text as
  * arguments and uses innerHTML to create an element inside the div, and the
- * text is displayed inside that element. The element should the tag name
+ * text is displayed inside that element. The element should be tag name
  * passed into the function
  */
-let setInnerHTMLForDiv = (tagName, text) => {
-    let grabDiv = document.querySelector("div");
-    let tag = document.createElement(tagName);
-    grabDiv.append(tag);
-    let textOfTag = document.createTextNode(text);
-    tag.append(textOfTag);
-}
-setInnerHTMLForDiv("span", "Hello");
+let grabDiv = document.querySelector("div");
+// let setInnerHTMLForDiv = (tagName, text) => {
+//     let subTag = document.createElement(tagName);
+//     subTag.innerText = text;
+//     grabDiv.append(subTag);
+// } 
+// setInnerHTMLForDiv("span", "Hello"); // One way to get dynamically creating tag and its text 
 
+// required way
+let setInnerHTMLForDiv = (tagName, text) => {
+    grabDiv.innerHTML = `<${tagName}>${text}</${tagName}>`
+}
+setInnerHTMLForDiv('span', "I am a new tag");
 
 /**
  * Exercise 5
- * create a function {addPtoDivWithText} which takes a string as an argument
+ * create a function {pushPtoDivWithText} which takes a string as an argument
  * and uses innerHTML to add a p tag containing the text into the div
  */
-
+let pushPtoDivWithText = (str) => {
+    
+    grabDiv.innerHTML += `<p>${str}</p>`;
+     
+} 
+pushPtoDivWithText("Hi again");
 /**
  * Exercise 6
  *
@@ -70,6 +79,13 @@ setInnerHTMLForDiv("span", "Hello");
  * as arguments and set it as a src and alt attributes values
  * for existing img
  */
+let setSrcToImage = (url, alt) => {
+    let image = document.querySelector("img");
+    image.src = `${url}`;
+    image.alt = `${alt}`;
+}
+setSrcToImage();
+
 
 /**
  * Exercise 7
@@ -81,13 +97,27 @@ setInnerHTMLForDiv("span", "Hello");
  *
  * Also add an attribute that opens your page in a new tab
  */
+let aTag = document.querySelector("a");
+let setCodersInHoodsLink = (url, text) => {
+    aTag.href = `${url}`;
+    aTag += " target = '_blank'";
+    aTag.innerText = text;
+    
 
+     
+}
+setCodersInHoodsLink("www.google.co.uk", "Search your heart-out");
 /**
  * Exercise 8
  *
  * create a function {disableResetBtn} which will disable button
  * with class "reset"
  */
+let disableResetBtn = () => {
+    let disableButton = document.querySelector(".reset").disabled = true;
+    
+}
+// disableResetBtn();
 
 /**
  * Exercise 9
@@ -95,6 +125,11 @@ setInnerHTMLForDiv("span", "Hello");
  * create a function {disableBtns} which takes class name as an argument
  * and disable all buttons with this class name
  */
+let disableBtns = document.querySelectorAll(".submit").disabled = true;
+// let disableBtns = (className) => {
+    //`${className}`
+// }
+// disableBtns("submit");
 
 /**
  * Exercise 10
