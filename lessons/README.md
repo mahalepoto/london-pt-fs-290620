@@ -15,3 +15,7 @@
 [DOM Manipulation](https://youtu.be/qPDfbvliiOo)
 
 [Events](https://youtu.be/4X2OOfZDtf4)
+
+[Interactive pages](https://youtu.be/uxOsFDwxI24)
+
+[CSS Animation and Wireframes](https://youtu.be/Ecq7ZqktCXU)
