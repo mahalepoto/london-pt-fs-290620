@@ -141,7 +141,15 @@ let disableBtns = document.querySelectorAll(".submit").disabled = true;
  * NOTE: We've added some CSS so when your classes are added,
  * you will see a difference
  */
+let listElements = document.querySelector(".list");
+let addClassToLi = () => {
+    listElements.forEach((list, index) => {
+        console.log(list);
+        console.log(index);
+    });
 
+}
+addClassToLi();
 /**
  * Exercise 11
  *
