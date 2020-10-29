@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+// import p from "./components/Ptags";
+import Dates from "./components/Dates";
 
 const APP_TITLE = "Awesome Pet Shop";
 
@@ -16,8 +18,19 @@ const APP_TITLE = "Awesome Pet Shop";
 
 const App = () => {
   const animals = ["cat", "dog", "giraffe", "pig", "lion", "rabbit"];
+  let dt = new Date();
 
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <ul>
+        {animals.map((animalName) => (
+          <li key={animalName}>{animalName}</li>
+        ))}
+      </ul>
+      <h1>{APP_TITLE}</h1>
+      <p>{dt.toLocaleDateString()}</p>
+    </div>
+  );
 };
 
 export default App;
